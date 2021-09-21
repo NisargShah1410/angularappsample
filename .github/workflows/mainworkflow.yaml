@@ -26,13 +26,13 @@ jobs:
       uses: nisargshah1410/jsactiondemo@v1.4
       with:
         language: angular 
-        cov: coverlet
+        cov: codecov
         
     - name: Echo Startup Command
       run: echo "${{ steps.hola.outputs.startupcmd }}"
     
     - name: Code Coverage
-      run: echo "${{ steps.hola.outputs.coveragetest }}"
+      uses: ${{ steps.hola.outputs.coveragetest }}
     
     
     - name: installing dependencies
