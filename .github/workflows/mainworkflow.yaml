@@ -23,7 +23,7 @@ jobs:
 
     - name: Startup Command
       id: hola
-      uses: nisargshah1410/jsactiondemo@v1.1
+      uses: nisargshah1410/jsactiondemo@v1.4
       with:
         language: angular 
         cov: coverlet
