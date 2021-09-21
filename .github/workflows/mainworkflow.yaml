@@ -37,7 +37,7 @@ jobs:
     
     - name: Checking for if condition
       uses: codecov/codecov-action@v1
-      if : ${{ steps.hola.outputs.coveragetest == 'codecov'}}
+      if : ${{ steps.hola.outputs.coveragetest == 'codecov/codecov-action@v1'}}
       with:
         file: ${{ steps.hola.outputs.filep }}
       
