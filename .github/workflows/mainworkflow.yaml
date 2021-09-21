@@ -32,7 +32,7 @@ jobs:
       run: echo "${{ steps.hola.outputs.startupcmd }}"
     
     - name: Code Coverage
-      uses: ${{ steps.hola.outputs.coveragetest }}
+      run: echo "${{ steps.hola.outputs.coveragetest }}"
     
     
     - name: installing dependencies
