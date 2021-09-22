@@ -40,6 +40,10 @@ jobs:
       if : ${{ steps.hola.outputs.coveragetest == 'codecov/codecov-action@v1'}}
       with:
         file: ${{ steps.hola.outputs.filep }}
+    
+    - name: Coverlet setting if condition
+      if : ${{ steps.hola.outputs.coveragetest == 'coverlet'}}
+      run : echo "dotnet test "${{ steps.hola.outputs.coverlet-settings }}""
       
     
     
