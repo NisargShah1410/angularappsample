@@ -35,15 +35,9 @@ jobs:
     - name: Code Coverage
       run: echo "${{ steps.hola.outputs.coveragetest }}"
     
-    - name: Checking for if condition
-      uses: codecov/codecov-action@v1
-      if : ${{ steps.hola.outputs.coveragetest == 'codecov'}}
-      with:
-        file: ${{ steps.hola.outputs.filep }}
     
-    - name: Coverlet setting if condition
-      if : ${{ steps.hola.outputs.coveragetest == 'coverlet'}}
-      run : echo "dotnet test "${{ steps.hola.outputs.coverlet-settings }}""
+    - name: Coverage if condition
+      run : echo "${{ steps.hola.outputs.coveragetest }}"
       
     
     
