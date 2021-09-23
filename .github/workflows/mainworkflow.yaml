@@ -32,8 +32,7 @@ jobs:
     - name: npm build, and test
       run: |
         npm install --save-dev @angular-devkit/build-angular
-        npm install -g karma
-        karma start
+        npm install -g karma-cli
       #  npm install codecov --save-dev
       #  ng test
         
