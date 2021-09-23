@@ -29,9 +29,9 @@ jobs:
         cov: codecov
         file-path: ./**/target/site/jacoco/jacoco.xml
     
-    #- name: npm build, and test
-     # run: |
-     #   #npm install --save-dev @angular-devkit/build-angular
+    - name: npm build, and test
+      run: |
+        npm install --save-dev @angular-devkit/build-angular
       #  npm install codecov --save-dev
       #  ng test
         
