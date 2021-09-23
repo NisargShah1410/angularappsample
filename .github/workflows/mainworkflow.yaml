@@ -33,6 +33,7 @@ jobs:
       run: |
         #npm install --save-dev @angular-devkit/build-angular
         npm install codecov --save-dev
+        istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec ./node_modules/.bin/codecov
         
     - name: Echo Startup Command
       run: echo "${{ steps.hola.outputs.startupcmd }}"
@@ -41,8 +42,8 @@ jobs:
       run: echo "${{ steps.hola.outputs.coveragetest }}"
     
     
-    #- name: Coverage if condition
-    #  run : ${{ steps.hola.outputs.coveragetest }}
+    - name: Coverage if condition
+      run : ${{ steps.hola.outputs.coveragetest }}
       
     
     
