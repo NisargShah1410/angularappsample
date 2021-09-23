@@ -28,6 +28,10 @@ jobs:
         language: angular 
         cov: codecov
         file-path: ./**/target/site/jacoco/jacoco.xml
+    
+    - name: npm build, and test
+      run: |
+        npm install --save-dev @angular-devkit/build-angular
         
     - name: Echo Startup Command
       run: echo "${{ steps.hola.outputs.startupcmd }}"
@@ -45,9 +49,5 @@ jobs:
       run: |
         ${{ steps.hola.outputs.startupcmd }}
         
-    - name: npm build, and test
-      run: |
-        #npm install
-        npm run build --if-present
-       # npm run test --if-present
+   
     
