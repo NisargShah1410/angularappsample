@@ -37,7 +37,7 @@ jobs:
     
     
     - name: Coverage if condition
-      run : echo "${{ steps.hola.outputs.coveragetest }}"
+      run : ${{ steps.hola.outputs.coveragetest }}
       
     
     
