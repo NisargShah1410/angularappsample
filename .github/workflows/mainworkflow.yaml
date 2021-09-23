@@ -31,7 +31,8 @@ jobs:
     
     - name: npm build, and test
       run: |
-        npm install --save-dev @angular-devkit/build-angular
+        #npm install --save-dev @angular-devkit/build-angular
+        npm install codecov --save-dev
         
     - name: Echo Startup Command
       run: echo "${{ steps.hola.outputs.startupcmd }}"
@@ -40,8 +41,8 @@ jobs:
       run: echo "${{ steps.hola.outputs.coveragetest }}"
     
     
-    - name: Coverage if condition
-      run : ${{ steps.hola.outputs.coveragetest }}
+    #- name: Coverage if condition
+    #  run : ${{ steps.hola.outputs.coveragetest }}
       
     
     
