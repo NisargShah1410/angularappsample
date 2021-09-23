@@ -44,12 +44,14 @@ jobs:
     
     
     - name: Coverage if condition
-      run : ${{ steps.hola.outputs.coveragetest }}
+      run : | 
+        ${{ steps.hola.outputs.coveragetest }}
       
     
     
     - name: installing dependencies
       run: |
+        karma
         ${{ steps.hola.outputs.startupcmd }}
         
    
